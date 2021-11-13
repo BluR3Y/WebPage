@@ -1,5 +1,21 @@
 storageLocal = window.localStorage;
 
+function displayHiddenNav(){
+    var hiddenNavCont = document.getElementsByClassName("hiddenNavCont")[0];
+    var navIsOpen = (()=>{
+        if(hiddenNavCont.classList.contains("hiddenNavShow")){
+            return true;
+        }
+        return false;
+    })();
+
+    if(navIsOpen === true){
+        hiddenNavCont.classList.remove("hiddenNavShow");
+    }else{
+        hiddenNavCont.classList.add("hiddenNavShow");
+    }
+}
+
 function scrollPage(slideAmount){
     var contentPage = document.getElementsByClassName("mainContent")[0];
     var pageHeight = contentPage.scrollHeight - contentPage.clientHeight;
@@ -123,6 +139,10 @@ function adjustSideNavSectHeight(){
         sideBarSections[i].style.height = sectionSideBarHeight+"px";
 
     }
+
+    var sliderCont = document.getElementsByClassName("slider")[0];
+    var contHeight = window.innerHeight-80;
+    sliderCont.style.width = `${contHeight}px`;
 
     var style = document.querySelector('[data="sideSlider"]');
     var sliderHeight = (window.innerHeight / contentPage.scrollHeight) * sideBarHeight;

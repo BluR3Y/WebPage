@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Rey's Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="src/main.css">
         <script src="src/loadingPage.js"></script>
@@ -73,6 +74,21 @@
                 <div class="scrollSection">
                     <style data="sideSlider" type="text/css"></style>
                     <input type="range" min="0" max="1000" oninput="scrollPage(this.value)" onmousewheel="moveSlider(event)" value="0" class="slider" id="sideNav_Slider">
+                </div>
+            </div>
+        </div>
+        <div class="hiddenNavCont">
+            <div class="hiddenNavBtn" onclick="displayHiddenNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="hiddenNav">
+                <div class="hiddenLogoCont">
+                    <h1><span class="leftChar">R</span><span class="rightChar">F</span></h1>
+                </div>
+                <div class="hiddenPageSection">
+
                 </div>
             </div>
         </div>
