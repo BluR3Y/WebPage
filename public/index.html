@@ -23,6 +23,7 @@
                 <h1><span class="leftChar">R</span><span class="rightChar">F</span></h1>
             </div>
         </div>
+        <div class="pageBlur" onclick="disableBlur(),displayHiddenNav()"></div>
         <script>hideLoading();</script>
         <div class="sideNav">
             <div class="sideNav_name"><h1><span class="leftChar">R</span><span class="rightChar">F</span></h1></div>
@@ -86,9 +87,35 @@
             <div class="hiddenNav">
                 <div class="hiddenLogoCont">
                     <h1><span class="leftChar">R</span><span class="rightChar">F</span></h1>
+                    <a id="hiddenResume" href="Images/Undergraduate Resume.pdf" target="_blank" onclick="displayHiddenNav()">Resume</a>
                 </div>
-                <div class="hiddenPageSection">
-
+                <div class="hiddenSectionCont">
+                    <div class="hiddenPageSection">
+                        <div class="hiddenSectionItem" onclick="gotoSection(0),displayHiddenNav()">
+                            <img src="Images/sideNav/home.png">
+                            <h1>Home</h1>
+                        </div>
+                        <div class="hiddenSectionItem" onclick="gotoSection(1),displayHiddenNav()">
+                            <img src="Images/sideNav/avatar.png">
+                            <h1>About Me</h1>
+                        </div>
+                        <div class="hiddenSectionItem" onclick="gotoSection(2),displayHiddenNav()">
+                            <img src="Images/sideNav/skills.png">
+                            <h1>Expertise</h1>
+                        </div>
+                        <div class="hiddenSectionItem" onclick="gotoSection(3),displayHiddenNav()">
+                            <img src="Images/sideNav/project.png">
+                            <h1>Projects</h1>
+                        </div>
+                        <div class="hiddenSectionItem" onclick="gotoSection(4),displayHiddenNav()">
+                            <img src="Images/sideNav/education.png">
+                            <h1>Education</h1>
+                        </div>
+                        <div class="hiddenSectionItem" onclick="gotoSection(5),displayHiddenNav()">
+                            <img src="Images/sideNav/send.png">
+                            <h1>Contact</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -276,6 +303,7 @@
                                 <li>The Dream.US Scholarship </li>
                                 <li>The Excelsior Scholarship</li>
                                 <li>Ambassador for the NYC DOE College Immigrant Ambassador Program</li>
+                                <li>NYC Tech Talent Pipeline Resident Developer</li>
                             </ul>
                         </div>
                     </div>

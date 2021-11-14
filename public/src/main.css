@@ -69,6 +69,17 @@ body{
     right: 0.06em;
 }
 
+/* -------------------------------------------------  Page Blur -------------------------------------------*/
+
+.pageBlur{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+
 /* -------------------------------------------------  side nav bar -------------------------------------------*/
 
 .sideNav{
@@ -228,12 +239,12 @@ body{
     cursor: pointer;
   }
 
-@media screen and (min-width:600px) and (min-height: 600px) {
+@media screen and (min-width:601px) and (min-height: 601px) {
     .sideNav{
         display: flex;
     }
 }
-/* ---------------------------------- main content ------------------------------ */
+/* ---------------------------------- Hidden Side Nav ------------------------------ */
 
 .hiddenNavCont{
     position: fixed;
@@ -244,6 +255,7 @@ body{
     transition: width 0.5s ease;
     background-color: rgb(6, 51, 102);
     display: none;
+    user-select: none;
 }
 .hiddenNavShow{
     width: 300px;
@@ -252,13 +264,15 @@ body{
 .hiddenNavBtn{
     position: absolute;
     left: -70px;
-    top: 30px;
+    /* top: 30px; */
+    top: -60px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 10px 0;
     width: 70px;
     height: 50px;
+    transition: top 0.5s ease;
 }
 .hiddenNavBtn div{
     height: 5px;
@@ -266,6 +280,10 @@ body{
     border-radius: 15px;
     margin: 0 auto;
     background-color: turquoise;
+}
+
+.hiddenNavBtnShow{
+    top: 30px;
 }
 
 .hiddenNav{
@@ -277,9 +295,11 @@ body{
 
 .hiddenLogoCont{
     width: 300px;
-    height: 150px;
+    height: 200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: rgb(19, 36, 73);
 }
 .hiddenLogoCont h1{
     width: fit-content;
@@ -292,11 +312,68 @@ body{
     font-weight: lighter;
     color: turquoise;
 }
+#hiddenResume{
+    /* margin-top: 40px; */
+    margin-top: 10px;
+    display: block;
+    font-family: 'Poppins',sans-serif;
+    width: fit-content;
+    height: auto;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 2px 20px;
+    border-radius:5px;
+    color: #00d0ff;
+    border: 2px solid rgb(5, 84, 201);
+}
+#hiddenResume:hover{
+    background-color:rgba(19, 167, 230,0.4);
+}
+
+.hiddenSectionCont{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
 
 .hiddenPageSection{
-    flex-grow: 1;
-    background-color: rgb(5, 5, 4);
-    overflow: hidden;
+    height: auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hiddenSectionItem{
+    width: 200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    margin-top: 1.6vh;
+    cursor: pointer;
+}
+.hiddenSectionItem:hover > h1{
+    color: rgb(11, 194, 222);
+}
+.hiddenSectionItem img{
+    max-height: 70%;
+    max-width: 70%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+}
+.hiddenSectionItem h1{
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
 }
 
 @media screen and (max-width:600px), screen and (max-height:600px){
@@ -304,6 +381,20 @@ body{
         display: block;
     }
 } 
+@media screen and (max-height:490px) {
+    .hiddenLogoCont{
+        width: 80vw !important;
+    }
+    .hiddenNavShow{
+        width: 80vw;
+    }
+    .hiddenPageSection{
+        width: 80vw !important;
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr) !important;
+        grid-template-rows: auto;
+    }
+}
 /* ---------------------------------- main content ------------------------------ */
 
 .mainContent{
@@ -364,6 +455,7 @@ body{
     width: fit-content;
     color: #00ffef;
     line-height: 100px;
+    white-space: nowrap;
 
     border-right: solid rgb(255, 255, 255);
 
@@ -399,23 +491,22 @@ body{
 
 @media screen and (max-width:1100px){
     .greetings{
-        width: 70vw !important;
+        width: 80vw !important;
     }
     .greetings p{
-        font-size: min(3.5vw,35px) !important;
-        margin-bottom: 1vw !important;
+        font-size: max(2.5vw,20px);
+        margin-bottom: max(1vw,10px);
     }
     .nameContainer{
-        min-height: 60px;
-        height: 11vw !important;
+        height: max(11vw,60px);
     }
     .myName{
-        font-size: min(12.5vw,100px) !important;
-        line-height: min(12.5vw,100px) !important;
+        font-size: max(9vw,55px);
+        line-height: max(9vw,55px);
     }
     .greetings h2{
-        font-size: min(3.5vw,20px) !important;
-        margin-top: min(5vw,30px) !important;
+        font-size: max(2.3vw,17px);
+        margin-top: max(1.5vw,20px);
     }
 }
 
@@ -427,7 +518,9 @@ body{
     flex-direction: column;
     min-width: 350px;
     width: 1100px;
-    margin: 60px auto 250px auto;
+    margin: 0 auto;
+    padding: 60px 0 250px 0;
+    /* margin: 60px auto 250px auto; */
 }
 
 .sectionBanner{
@@ -503,9 +596,6 @@ body{
     .aboutMe{
         width: 70vw !important;
     }
-    .myInfoText{
-
-    }
     .myInfoText h1{
         font-size: 20px !important;
         line-height: 30px !important;
@@ -531,6 +621,7 @@ body{
     .myInfoText{
         width: 100%;
         padding: 0;
+        text-align: center;
     }
     .myImgContainer{
         width: 100%;
@@ -548,7 +639,9 @@ body{
     width: 1100px;
     min-height: 570px;
     height: auto;
-    margin: 60px auto 250px auto;
+    margin: 0 auto;
+    padding: 60px 0 250px 0;
+    /* margin: 60px auto 250px auto; */
 }
 
 .mySkills{
@@ -849,8 +942,9 @@ body{
     flex-direction: column;
     width: 1050px;
     height: auto;
-    margin: 60px auto 250px auto;
-
+    margin: 0 auto;
+    padding: 60px 0 250px 0;
+    /* margin: 60px auto 250px auto; */
 }
 
 .projectContainer{
@@ -971,7 +1065,7 @@ body{
         width: 70vw !important;
     }
     .projectContainer{
-        margin-bottom: 15vw !important;
+        margin-bottom: max(18vw,70px) !important;
     }
     .projectImgCont{
         width: 45.5vw !important;
@@ -1010,17 +1104,20 @@ body{
 @media screen and (max-width: 770px){
     .projectContainer{
         width: 70vw !important;
+        margin-bottom: 100px !important;
     }
     .projectImgCont{
         width: 100% !important;
-        height: 300px !important;
+        height: auto !important;
+        background-size: cover !important;
     }
     .projectTextCont{
         position: relative !important;
         width: 100% !important;
-        height: 100% !important;
+        /* height: 100% !important; */
+        min-height: 40vw !important;
+        height: auto !important;
         top: 0 !important;
-        border-radius: 5px;
         background-color: #0C2034;
         opacity: 0.95;
         display: flex !important;
@@ -1042,13 +1139,15 @@ body{
         font-size: 15px !important;
         display: block !important;
         width: 90% !important;
-        margin: 0 auto !important;
+        margin: 0 auto max(5vw,25px) auto !important;
         padding: 0 !important;
     }
     .projectLanguages{
-       float: none !important;
-       margin: 8vw auto !important;
-       width: 100%;
+        position: absolute;
+        float: none !important;
+       /* margin: 8vw auto 0 auto !important; */
+        bottom: -35px;
+        width: 100%;
     }
     .projectLanguages h1{
         margin: 0 auto;
@@ -1056,13 +1155,12 @@ body{
 }
 
 @media screen and (max-width: 560px) {
-    .projectImgCont{
-        height: 350px !important;
-    }
+
     .projectLanguages{
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(3,1fr);
         grid-template-rows: auto;
+        bottom: -55px;
     }
 }
 
@@ -1073,8 +1171,9 @@ body{
     flex-direction: column;
     width: 1100px;
     height: auto;
-    margin: 60px auto 250px auto;
-
+    margin: 0 auto;
+    padding: 60px 0 250px 0;
+    /* margin: 60px auto 250px auto; */
 }
 
 .educationWrapper{
@@ -1175,13 +1274,21 @@ body{
 }
 
 .workDetails{
-    display: block;
-    width: 100%;
+    width: 98%;
     height: auto;
     list-style: none;
     margin: 0;
+    padding: 0;
     font-size: 16px;
+    float: right;
 }
+/*     width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 19px; */
+
 .workDetails li{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
@@ -1238,11 +1345,11 @@ body{
         float: none;
     }
     .workTitle{
-        font-size: max(3vw,23px) !important;
+        font-size: max(3vw,19px) !important;
     }
     .workDetails{
         width: calc(100% - 4vw) !important;
-        font-size: 16px !important;
+        font-size: max(1.3vw,11px) !important;
     }
     .courseWork{
         grid-template-columns: repeat(3, 1fr);
@@ -1286,7 +1393,9 @@ body{
     min-width: 350px;
     width: 800px;
     height: auto;
-    margin: 50px auto 180px auto;
+    margin: 0 auto;
+    padding: 50px 0 180px 0;
+        /* margin: 50px auto 180px auto; */
 }
 
 .goodbyeText{

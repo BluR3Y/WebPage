@@ -1,4 +1,16 @@
 storageLocal = window.localStorage;
+var lastScrollTop=0;
+
+function desktopMode(){
+    var pageWidth = window.innerWidth;
+    var pageHeight = window.innerHeight;
+    var minWidth = 601;
+    var minHeight = 601;
+    if(pageWidth >= minWidth && pageHeight >= minHeight){
+        return true;
+    }
+    return false;
+}
 
 function displayHiddenNav(){
     var hiddenNavCont = document.getElementsByClassName("hiddenNavCont")[0];
@@ -11,9 +23,31 @@ function displayHiddenNav(){
 
     if(navIsOpen === true){
         hiddenNavCont.classList.remove("hiddenNavShow");
+        disableBlur();
     }else{
         hiddenNavCont.classList.add("hiddenNavShow");
+        enableBlur();
     }
+}
+
+function displayHiddenBtn(){
+    var contentScroll = document.getElementsByClassName("mainContent")[0].scrollTop;
+    var hiddenNavBtn = document.getElementsByClassName("hiddenNavBtn")[0];
+    if(contentScroll > lastScrollTop){
+        hiddenNavBtn.classList.remove("hiddenNavBtnShow");
+    }else{
+        hiddenNavBtn.classList.add("hiddenNavBtnShow");
+    }
+    lastScrollTop=contentScroll;
+}
+
+function disableBlur(){
+    var blur = document.getElementsByClassName("pageBlur")[0];
+    blur.style.display = "none";
+}
+function enableBlur(){
+    var blur = document.getElementsByClassName("pageBlur")[0];
+    blur.style.display = "block";
 }
 
 function scrollPage(slideAmount){
@@ -243,20 +277,33 @@ window.onload = function() {
     showName();
 };
 
+
 document.getElementsByClassName("mainContent")[0].addEventListener("scroll", function(){
-    updateSlider();
-    updateSelectedSection();
+    if(desktopMode()){
+        updateSlider();
+        updateSelectedSection();
+    }else{
+        displayHiddenBtn();
+    }
 });
 
 window.addEventListener("load",()=>{
     if(storageLocal.getItem('lastSection') != null && storageLocal.getItem('lastSection') != 0){
         loadtoSection(storageLocal.getItem('lastSection'));
     }
-    adjustSideNavSectHeight();
+    if(desktopMode()){
+        adjustSideNavSectHeight();
+    }else{
+        document.getElementsByClassName("hiddenNavBtn")[0].classList.add("hiddenNavBtnShow");
+    }
 });
 
 window.addEventListener("resize", ()=>{
-    adjustSideNavSectHeight();
-    updateSelectedSection();
-    updateSlider();
+    if(desktopMode()){
+        adjustSideNavSectHeight();
+        updateSelectedSection();
+        updateSlider();
+    }else{
+        document.getElementsByClassName("hiddenNavBtn")[0].classList.add("hiddenNavBtnShow");
+    }
 });
