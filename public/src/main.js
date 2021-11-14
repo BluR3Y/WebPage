@@ -5,7 +5,7 @@ function desktopMode(){
     var pageWidth = window.innerWidth;
     var pageHeight = window.innerHeight;
     var minWidth = 601;
-    var minHeight = 601;
+    var minHeight = 501;
     if(pageWidth >= minWidth && pageHeight >= minHeight){
         return true;
     }
@@ -175,7 +175,7 @@ function adjustSideNavSectHeight(){
     }
 
     var sliderCont = document.getElementsByClassName("slider")[0];
-    var contHeight = window.innerHeight-80;
+    var contHeight = window.innerHeight-70;
     sliderCont.style.width = `${contHeight}px`;
 
     var style = document.querySelector('[data="sideSlider"]');
@@ -272,11 +272,6 @@ function submitMessage(){
 
     window.location.href = `mailto:reyhector1234@gmail.com?subject=Saying Hello&body=${messengerMessage}%0D%0A%0D%0A`;
 }
-
-window.onload = function() {
-    showName();
-};
-
 
 document.getElementsByClassName("mainContent")[0].addEventListener("scroll", function(){
     if(desktopMode()){
