@@ -267,6 +267,221 @@ function showName(){
     }
 }
 
+// var sectionTwoContent = [document.getElementsByClassName("mtInfo")[0]];
+// var sectionThreeContent = [document.getElementsByClassName("mySkills")[0]];
+// var sectionFourContent = [document.getElementsByClassName("projectContainer")[0],document.getElementsByClassName("projectContainer")[1],document.getElementsByClassName("projectContainer")[2]];
+// var sectionFiveContent = [document.getElementsByClassName("educationWrapper")[0],document.getElementsByClassName("collegeWorkWrapper")[0],document.getElementsByClassName("collegeWorkWrapper")[1]];
+// var sectionSixContent = [document.getElementsByClassName("messageMe")[0]];
+
+function displaySectionOneContent(){
+    var greetingsContent = document.getElementsByClassName("greetings")[0];
+
+    if(greetingsContent.style.opacity != "1"){
+        var contentPage = document.getElementsByClassName("mainContent")[0];
+        var pageBottom = contentPage.clientHeight;
+        var greetingsInfo = greetingsContent.getBoundingClientRect();
+
+        if((greetingsInfo.bottom - 100 >= 0) && (greetingsInfo.top <= 0)){
+            greetingsContent.style.opacity = "1";
+            greetingsContent.style.animation = "fadeInDown 1s ease";
+            showName();
+        }else if((greetingsInfo.top >= 0) && (greetingsInfo.bottom <= pageBottom)){
+            greetingsContent.style.opacity = "1";
+            greetingsContent.style.animation = "fadeInUp 1s ease";
+            showName();
+        }
+    }
+    
+}
+
+function displaySectionTwoContent(){
+    var myInfo = document.getElementsByClassName("myInfo")[0];
+
+    if(myInfo.style.opacity != "1"){
+        var contentPage = document.getElementsByClassName("mainContent")[0];
+        var pageBottom = contentPage.clientHeight;    
+        var myInfoPosition = myInfo.getBoundingClientRect();
+
+        if((myInfoPosition.top + 100 <= pageBottom) && (myInfoPosition.bottom >= pageBottom)){
+            myInfo.style.opacity = "1";
+            myInfo.style.animation = "fadeInUp 1s ease";
+        }else if((myInfoPosition.bottom - 100 >= 0) && (myInfoPosition.top <= 0)){
+            myInfo.style.opacity = "1";
+            myInfo.style.animation = "fadeInDown 1s ease";
+        }else if((myInfoPosition.top >= 0) && (myInfoPosition.bottom <= pageBottom)){
+            myInfo.style.opacity = "1";
+            myInfo.style.animation = "fadeInUp 1s ease";
+        }
+    }
+}
+
+function displaySectionThreeContent(){
+    var mySkills = document.getElementsByClassName("mySkills")[0];
+
+    if(mySkills.style.opacity != "1"){
+        var contentPage = document.getElementsByClassName("mainContent")[0];
+        var pageBottom = contentPage.clientHeight;
+        var mySkillsPosition = mySkills.getBoundingClientRect();
+
+        if((mySkillsPosition.top + 100 <= pageBottom) && (mySkillsPosition.bottom >= pageBottom)){
+            mySkills.style.opacity = "1";
+            mySkills.style.animation = "fadeInUp 1s ease";
+        }else if((mySkillsPosition.bottom - 100 >= 0) && (mySkillsPosition.top <= 0)){
+            mySkills.style.opacity = "1";
+            mySkills.style.animation = "fadeInDown 1s ease";
+        }else if((mySkillsPosition.top >= 0) && (mySkillsPosition.bottom <= pageBottom)){
+            mySkills.style.opacity = "1";
+            mySkills.style.animation = "fadeInUp 1s ease";
+        }
+    }
+}
+
+function displaySectionFourContent(){
+    var projects = document.getElementsByClassName("projectContainer");
+
+    for(var i=0; i < projects.length; i++){
+        var currentProject = projects[i];
+
+        if(currentProject.style.opacity != "1"){
+            var contentPage = document.getElementsByClassName("mainContent")[0];
+            var pageBottom = contentPage.clientHeight;
+            var currentProjectPosition = currentProject.getBoundingClientRect();
+
+            if((currentProjectPosition.top + 100 <= pageBottom) && (currentProjectPosition.bottom >= pageBottom)){
+                currentProject.style.opacity = "1";
+                currentProject.style.animation = "fadeInUp 1s ease";
+            }else if((currentProjectPosition.bottom - 100 >= 0) && (currentProjectPosition.top <= 0)){
+                currentProject.style.opacity = "1";
+                currentProject.style.animation = "fadeInDown 1s ease";
+            }else if((currentProjectPosition.top >= 0) && (currentProjectPosition.bottom <= pageBottom)){
+                currentProject.style.opacity = "1";
+                currentProject.style.animation = "fadeInUp 1s ease";
+            }
+        }
+    }
+}
+
+function displaySectionFiveContent(){
+    var contentPage = document.getElementsByClassName("mainContent")[0];
+    var pageBottom = contentPage.clientHeight;
+
+    var myAwards = document.getElementsByClassName("educationWrapper")[0];
+    var myMajor = document.getElementsByClassName("collegeWorkWrapper")[0];
+    var myMinor = document.getElementsByClassName("collegeWorkWrapper")[1];
+
+    if(myAwards.style.opacity != "1"){
+        myAwardsPosition = myAwards.getBoundingClientRect();
+
+        if((myAwardsPosition.top + 100 <= pageBottom) && (myAwardsPosition.bottom >= pageBottom)){
+            myAwards.style.opacity = "1";
+            myAwards.style.animation = "fadeInUp 1s ease";
+        }else if((myAwardsPosition.bottom - 100 >= 0) && (myAwardsPosition.top <= 0)){
+            myAwards.style.opacity = "1";
+            myAwards.style.animation = "fadeInDown 1s ease";
+        }else if((myAwardsPosition.top >= 0) && (myAwardsPosition.bottom <= pageBottom)){
+            myAwards.style.opacity = "1";
+            myAwards.style.animation = "fadeInUp 1s ease";
+        }
+    }
+    if(myMajor.style.opacity != "1"){
+        myMajorPosition = myMajor.getBoundingClientRect();
+
+        if((myMajorPosition.top + 100 <= pageBottom) && (myMajorPosition.bottom >= pageBottom)){
+            myMajor.style.opacity = "1";
+            myMajor.style.animation = "fadeInUp 1s ease";
+        }else if((myMajorPosition.bottom - 100 >= 0) && (myMajorPosition.top <= 0)){
+            myMajor.style.opacity = "1";
+            myMajor.style.animation = "fadeInDown 1s ease";
+        }else if((myMajorPosition.top >= 0) && (myMajorPosition.bottom <= pageBottom)){
+            myMajor.style.opacity = "1";
+            myMajor.style.animation = "fadeInUp 1s ease";
+        }
+    }
+    if(myMinor.style.opacity != "1"){
+        myMinorPosition = myMinor.getBoundingClientRect();
+
+        if((myMinorPosition.top + 100 <= pageBottom) && (myMinorPosition.bottom >= pageBottom)){
+            myMinor.style.opacity = "1";
+            myMinor.style.animation = "fadeInUp 1s ease";
+        }else if((myMinorPosition.bottom - 100 >= 0) && (myMinorPosition.top <= 0)){
+            myMinor.style.opacity = "1";
+            myMinor.style.animation = "fadeInDown 1s ease";
+        }else if((myMinorPosition.top >= 0) && (myMinorPosition.bottom <= pageBottom)){
+            myMinor.style.opacity = "1";
+            myMinor.style.animation = "fadeInUp 1s ease";
+        }
+    }
+}
+
+function displaySectionSixContent(){
+    var messageMe = document.getElementsByClassName("messageMe")[0];
+
+    if(messageMe.style.opacity != "1"){
+        var contentPage = document.getElementsByClassName("mainContent")[0];
+        var pageBottom = contentPage.clientHeight;
+        messageMePosition = messageMe.getBoundingClientRect();
+
+        if((messageMePosition.top + 100 <= pageBottom) && (messageMePosition.bottom >= pageBottom)){
+            messageMe.style.opacity = "1";
+            messageMe.style.animation = "fadeInUp 1s ease";
+        }else if((messageMePosition.bottom - 100 >= 0) && (messageMePosition.top <= 0)){
+            messageMe.style.opacity = "1";
+            messageMe.style.animation = "fadeInDown 1s ease";
+        }else if((messageMePosition.top >= 0) && (messageMePosition.bottom <= pageBottom)){
+            messageMe.style.opacity = "1";
+            messageMe.style.animation = "fadeInUp 1s ease";
+        }
+    }
+}
+
+function displayContent(){
+
+    var selectedSections = (()=>{
+        var mainContent = document.getElementsByClassName("mainContent")[0];
+        var sectionContainers = document.getElementsByClassName("sectionContainer");
+        var scrollAmount = mainContent.scrollTop;
+        var bottomView = scrollAmount + mainContent.clientHeight;
+        var sections = [];
+        for(var i=0; i < sectionContainers.length; i++){
+            var sectionTop = function(){
+                var sumHeight = 0;
+                for(var j=i-1; j >=0; j--){
+                    sumHeight += sectionContainers[j].clientHeight;
+                }
+                return sumHeight;
+            }();
+            var sectionBottom = sectionTop + sectionContainers[i].clientHeight - 1;
+            if((sectionTop >= scrollAmount && sectionTop < bottomView) || (sectionBottom > scrollAmount && sectionBottom < bottomView) || (sectionTop <= scrollAmount && bottomView <= sectionBottom)){
+                sections.push(i);
+            }
+        }
+        return sections;
+    })();
+
+    for(var i=0; i < selectedSections.length; i++){
+        switch(selectedSections[i]){
+            case 0:
+                displaySectionOneContent();
+                break;
+            case 1:
+                displaySectionTwoContent();
+                break;
+            case 2:
+                displaySectionThreeContent();
+                break;
+            case 3:
+                displaySectionFourContent();
+                break;
+            case 4:
+                displaySectionFiveContent();
+                break;
+            case 5:
+                displaySectionSixContent();
+                break;
+        }
+    }
+}
+
 function submitMessage(){
     var messengerMessage = String(document.getElementsByClassName("userMessage")[0].value);
 
@@ -280,6 +495,7 @@ document.getElementsByClassName("mainContent")[0].addEventListener("scroll", fun
     }else{
         displayHiddenBtn();
     }
+    displayContent();
 });
 
 window.addEventListener("load",()=>{
@@ -291,6 +507,7 @@ window.addEventListener("load",()=>{
     }else{
         document.getElementsByClassName("hiddenNavBtn")[0].classList.add("hiddenNavBtnShow");
     }
+    displayContent();
 });
 
 window.addEventListener("resize", ()=>{
