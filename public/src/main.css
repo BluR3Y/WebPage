@@ -144,6 +144,35 @@ body{
     }
 }
 
+@media screen and (min-width: 1300px) {
+    .bar {
+        width: 50vw;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .bar {
+        width: 650px;
+    }
+}
+@media screen and (max-width: 825px) {
+    .bar {
+        width: 80vw;
+    }
+    .gatheredItem {
+        white-space: normal;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 550px) {
+    .bar {
+        width: 90vw;
+    }
+    .gatheredItem {
+        left: 50% !important;
+        transform: translate(-50%);
+    }
+}
+
 /* -------------------------------------------------  Page Blur -------------------------------------------*/
 
 .pageBlur{
