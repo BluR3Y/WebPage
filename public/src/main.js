@@ -507,7 +507,9 @@ window.addEventListener("load",()=>{
     }else{
         document.getElementsByClassName("hiddenNavBtn")[0].classList.add("hiddenNavBtnShow");
     }
-    displayContent();
+    setTimeout(() => {
+        displayContent(); 
+    }, 9000);
 });
 
 window.addEventListener("resize", ()=>{

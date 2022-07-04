@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="src/main.css">
-        <script src="src/loadingPage.js"></script>
+        <script src="https://kit.fontawesome.com/8b76ebfb86.js" crossorigin="anonymous"></script>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +18,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="loadingPage">
-            <div class="logoCont">
-                <h1><span class="leftChar">R</span><span class="rightChar">F</span></h1>
+        <div class="loading-page">
+            <div class="contentCont">
+                <h1 class="text-style" id="banner">Loading</h1>
+                <div class="barCont">
+                    <div class="bar">
+                        <h1 class="text-style" id="percentage">0%</h1>
+                    </div>
+                    <div class="gatheredCont"></div>
+                </div>
             </div>
         </div>
-        <div class="pageBlur" onclick="disableBlur(),displayHiddenNav()"></div>
-        <!-- <script>hideLoading();</script> -->
+        <script src="src/loadingPage.js"></script>
+
         <div class="sideNav">
             <div class="sideNav_name"><h1><span class="leftChar">R</span><span class="rightChar">F</span></h1></div>
             <div class="scrollBar">
