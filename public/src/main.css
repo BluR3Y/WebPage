@@ -1151,17 +1151,22 @@ body{
 }
 
 
-#projectOne{
+#projectOne {
+    background: url(../Images/Projects/Project4.png) 0 0 no-repeat fixed;
+    background-attachment: local;
+    background-size: 100% 100%;
+}
+#projectTwo {
     background: url(../Images/Projects/Project1.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
 }
-#projectTwo{
+#projectThree {
     background: url(../Images/Projects/Project3.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
 }
-#projectThree{
+#projectFour {
     background: url(../Images/Projects/Project2.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
