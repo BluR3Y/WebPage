@@ -895,9 +895,9 @@ body{
 .skillImgs{
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: row;
     margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
 }
 
@@ -925,11 +925,54 @@ body{
 #skillImg_Java{
     width: 80px;
 }
+#skillImg_Django{
+    width: 140px;
+}
+#skillImg_Flask{
+    width: 130px;
+    filter: invert(1);
+}
+#skillImg_Graphql{
+    width: 100px;
+}
 #skillImg_MySQL{
     width: 150px;
 }
 #skillImg_mongoDB{
-    width: 200px;
+    width: 180px;
+}
+#skillImg_Redis{
+    width: 170px;
+}
+#skillImg_SQLite{
+    width: 160px;
+}
+#skillImg_Cassandra{
+    width: 135px;
+}
+#skillImg_Neo4j{
+    width: 70px;
+}
+#skillImg_Docker{
+    width: 120px;
+}
+#skillImg_Kubernetes{
+    width: 100px;
+}
+#skillImg_Terraform{
+    width: 90px;
+}
+#skillImg_Ansible{
+    width: 100px;
+}
+#skillImg_Jenkins{
+    width: 90px;
+}
+#skillImg_AWS{
+    width: 110px;
+}
+#skillImg_Google_Cloud{
+    width: 110px;
 }
 #skillImg_Ipython{
     width: 140px;
@@ -1031,11 +1074,53 @@ body{
     #skillImg_Java{
         width: 9vw;
     }
+    #skillImg_Django{
+        width: 16vw;
+    }
+    #skillImg_Flask{
+        width: 15vw;
+    }
+    #skillImg_Graphql{
+        width: 10vw;
+    }
     #skillImg_MySQL{
         width: 17vw;
     }
     #skillImg_mongoDB{
-        width: 22vw;
+        width: 20vw;
+    }
+    #skillImg_Redis{
+        width: 16vw;
+    }
+    #skillImg_SQLite{
+        width: 15vw;
+    }
+    #skillImg_Cassandra{
+        width: 13vw;
+    }
+    #skillImg_Neo4j{
+        width: 8vw;
+    }
+    #skillImg_Docker{
+        width: 12vw;
+    }
+    #skillImg_Kubernetes{
+        width: 10vw;
+    }
+    #skillImg_Terraform{
+        width: 8vw;
+    }
+    #skillImg_Ansible{
+        width: 10vw;
+    }
+    #skillImg_Jenkins{
+        width: 9vw;
+    }
+    #skillImg_AWS{
+        width: 11vw;
+    }
+    #skillImg_Google_Cloud{
+        width: 11vw;
     }
     #skillImg_Ipython{
         width: 16vw;
@@ -1049,9 +1134,7 @@ body{
 }
 @media screen and (max-width:880px){
     .skillImgs{
-        display: grid;
         grid-template-columns: repeat(2,1fr);
-
     }
     .skillImgItem img{
         width: 90px !important;
@@ -1065,11 +1148,53 @@ body{
     #skillImg_Java{
         width: 80px !important;
     }
+    #skillImg_Django{
+        width: 130px !important;
+    }
+    #skillImg_Flask{
+        width: 130px !important;
+    }
+    #skillImg_Graphql{
+        width: 100px !important;
+    }
     #skillImg_MySQL{
         width: 140px !important;
     }
     #skillImg_mongoDB{
+        width: 150px !important;
+    }
+    #skillImg_Redis{
+        width: 150px !important;
+    }
+    #skillImg_SQLite{
         width: 140px !important;
+    }
+    #skillImg_Cassandra{
+        width: 130px !important;
+    }
+    #skillImg_Neo4j{
+        width: 70px !important;
+    }
+    #skillImg_Docker{
+        width: 120px !important;
+    }
+    #skillImg_Kubernetes{
+        width: 100px !important;
+    }
+    #skillImg_Terraform{
+        width: 90px !important;
+    }
+    #skillImg_Ansible{
+        width: 100px !important;
+    }
+    #skillImg_Jenkins{
+        width: 100px !important;
+    }
+    #skillImg_AWS{
+        width: 110px !important;
+    }
+    #skillImg_Google_Cloud{
+        width: 110px !important;
     }
     #skillImg_Ipython{
         width: 120px !important;

@@ -29,7 +29,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="loading-page">
+        <!-- <div class="loading-page">
             <div class="contentCont">
                 <h1 class="text-style" id="banner">Loading</h1>
                 <div class="barCont">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <script src="src/loadingPage.js"></script>
+        <script src="src/loadingPage.js"></script> -->
 
         <div class="sideNav">
             <div class="sideNav_name"><h1><span class="leftChar">R</span><span class="rightChar">F</span></h1></div>
@@ -186,11 +186,12 @@
                         <div class="skillTitleCont">
                             <div class="skillIndicatorCont"><div class="skillIndicator"></div></div>
                             <div class="skillTitles">
-                                <div class="skillTitleItem selectedSkillTitle" onclick="gotoSkill(0)"><h1>Front End Development</h1></div>
-                                <div class="skillTitleItem" onclick="gotoSkill(1)"><h1>Back End Development</h1></div>
-                                <div class="skillTitleItem" onclick="gotoSkill(2)"><h1>Database Architecture</h1></div>
-                                <div class="skillTitleItem" onclick="gotoSkill(3)"><h1>Analytics</h1></div>
-                                <div class="skillTitleItem" onclick="gotoSkill(4)"><h1>Other Technologies</h1></div>
+                                <div class="skillTitleItem selectedSkillTitle" onclick="gotoSkill(0)"><h1>Front-End Development</h1></div>
+                                <div class="skillTitleItem" onclick="gotoSkill(1)"><h1>Back-End Development</h1></div>
+                                <div class="skillTitleItem" onclick="gotoSkill(2)"><h1>Database Management</h1></div>
+                                <div class="skillTitleItem" onclick="gotoSkill(3)"><h1>Development Operations</h1></div>
+                                <div class="skillTitleItem" onclick="gotoSkill(4)"><h1>Analytics</h1></div>
+                                <div class="skillTitleItem" onclick="gotoSkill(5)"><h1>Other Technologies</h1></div>
                             </div>
                         </div>
                         <div class="skillInfo">
@@ -200,14 +201,14 @@
                                     <div class="skillImgItem"><img src="Images/mySkills/css.png" alt="CSS Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">CSS3</h1></div></div>
                                     <div class="skillImgItem"><img src="Images/mySkills/javascript.png" alt="Javascript Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Javascript</h1></div></div>
                                     <div class="skillImgItem"><img src="Images/mySkills/jquery.png" alt="Jquery Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Jquery</h1></div></div>
-                                    <div class="skillImgItem"><img src="Images/mySkills/react.png" alt="React Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">React</h1></div></div>
+                                    <div class="skillImgItem"><img src="Images/mySkills/react.png" alt="React Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">React Native</h1></div></div>
+                                    <div class="skillImgItem"><img src="Images/mySkills/next.png" alt="Next Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Next.js</h1></div></div>
+                                    <div class="skillImgItem"><img src="Images/mySkills/angular.png" alt="Next Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Angular</h1></div></div>
                                 </div>
                                 <ul class="skillInfoText">
-                                    <li>5+ years of experience in client-side development.</li>
-                                    <li>Designed numerous elegant websites using HTML and CSS.</li>
-                                    <li>Built responsive websites that provide seamless and optimal user experience using Javascript.</li>
-                                    <li>Proficient in implementing numerous frontend frameworks such as Jquery and React.</li>
-
+                                    <li>Over a decade of extensive experience specializing in the design and development of front-end applications across multiple programming languages, leveraging a diverse array of frameworks.</li>
+                                    <li>10+ years leveraging HTML, CSS, and JavaScript to craft a multitude of sophisticated and interactive web applications renowned for their elegance and dynamism.</li>
+                                    <li>7+ years employing a diverse array of frontend frameworks, including Angular, Next.js, and React Native, to architect and develop seamless, high-performance applications aimed at delivering exceptional user experiences.</li>
                                 </ul>
                             </div>
                             <div class="skillInfoItem" id="skill_backEnd">
@@ -217,22 +218,47 @@
                                     <div class="skillImgItem"><img src="Images/mySkills/cpp.svg" alt="CPP Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">CPP</h1></div></div>
                                     <div class="skillImgItem"><img id="skillImg_Express" src="Images/mySkills/express.png" alt="Express Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Express</h1></div></div>
                                     <div class="skillImgItem"><img id="skillImg_Java" src="Images/mySkills/java.png" alt="Java Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Java</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Django" src="Images/mySkills/django.png" alt="Django Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Django</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Flask" src="Images/mySkills/flask.png" alt="Flask Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Flask</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Graphql" src="Images/mySkills/graphql.png" alt="GraphQL Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">GraphQL</h1></div></div>
                                 </div>
                                 <ul class="skillInfoText">
-                                    <li>5+ years of experience in server-side development.</li>
-                                    <li>Developed several backend web architectures using PHP, Python, C++, and Java.</li>
-                                    <li>Experience implementing databases, backend logic, APIs, and Servers.</li>
-                                    <li>Proficient in implementing numerous backend frameworks such as Express and Django.</li>
+                                    <li>8+ years of experience developing reliable, enterprise-quality backend servers. I specialize in architecting robust solutions that prioritize scalability, security, and seamless integration, ensuring optimal performance for diverse business requirements.</li>
+                                    <li>7+ years of experience implementing a range of API architectures, including REST, SOAP, and GraphQL, to efficiently manage large-scale data requests. This expertise encompasses designing, developing, and optimizing API solutions tailored to diverse business needs and performance requirements.</li>
                                 </ul>
                             </div>
                             <div class="skillInfoItem" id="skill_database">
                                 <div class="skillImgs">
                                     <div class="skillImgItem"><img id="skillImg_MySQL" src="Images/mySkills/mysql.png" alt="MySQL Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">MySQL</h1></div></div>
                                     <div class="skillImgItem"><img src="Images/mySkills/postgresql.png" alt="PostgreSQL Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">PostgreSQL</h1></div></div>
-                                    <div class="skillImgItem"><img id="skillImg_mongoDB" src="Images/mySkills/mongo.png" alt="mongoDB Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Mongo Database</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_mongoDB" src="Images/mySkills/mongo.png" alt="mongoDB Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">MongoDB</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Redis" src="Images/mySkills/redis.png" alt="Redis Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Redis</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_SQLite" src="Images/mySkills/sqlite.png" alt="Sqlite Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">SQlite</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Cassandra" src="Images/mySkills/cassandra.png" alt="Cassandra Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Apache Cassandra</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Neo4j" src="Images/mySkills/neo4j.png" alt="Neo4j Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Neo4j</h1></div></div>
                                 </div>
                                 <ul class="skillInfoText">
-                                    <li>Experience using MySQL, PostgreSQL, and MongoDB to develop, implement, and maintain database infrastructures.</li>
+                                    <li>Significant proficiency demonstrated in utilizing databases across diverse paradigms, including relational, document, graph, and key-value structures.</li>
+                                    <li>7+ years utilzing relational databases such as MySQL, Postgres, and SQLite</li>
+                                    <li>5+ years utilizing document databases such as MongoDB</li>
+                                    <li>4+ years utilizing key-value databases such as Redis and Apache Cassandra</li>
+                                    <li>4+ years utilizing graph databases such as Neo4j</li>
+                                </ul>
+                            </div>
+                            <div class="skillInfoItem" id="skill_devops">
+                                <div class="skillImgs">
+                                    <div class="skillImgItem"><img id="skillImg_Docker" src="Images/mySkills/docker.png" alt="Docker Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Docker</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Kubernetes" src="Images/mySkills/kubernetes.png" alt="Kubernetes Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Kubernetes</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Terraform" src="Images/mySkills/terraform.png" alt="Terraform Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Terraform</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Ansible" src="Images/mySkills/ansible.png" alt="Ansible Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Ansible</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Jenkins" src="Images/mySkills/jenkins.png" alt="Jenkins Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Jenkins</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_AWS" src="Images/mySkills/aws.png" alt="AWS Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Amazon Web Services</h1></div></div>
+                                    <div class="skillImgItem"><img id="skillImg_Google_Cloud" src="Images/mySkills/google_cloud.png" alt="Google Cloud Icon"><div class="imgTextCont"><div class="imgTextPointer"></div><h1 class="imgTextBox">Google Cloud</h1></div></div>
+                                </div>
+                                <ul class="skillInfoText">
+                                    <li>6+ years of specialized proficiency in virtualization and orchestration technologies, with a primary focus on Docker and Kubernetes, alongside other complementary tools. I have demonstrated proficiency in architecting, implementing, and optimizing intricate containerized environments. Leveraging these technologies, I have successfully orchestrated scalable, resilient, and high-performance infrastructures to meet diverse business requirements.</li>
+                                    <li>6+ years of comprehensive experience in utilizing leading cloud computing providers, notably AWS and Google Cloud, to host and manage diverse cloud infrastructures encompassing Virtual Private Clouds (VPCs), servers, storage, and associated resources.</li>
+                                    <li>5+ years of experience in utilizing Infrastructure as Code methodologies, prominently leveraging tools like Terraform and Ansible, alongside other complementary solutions. I've adeptly employed these tools to provision and configure cloud infrastructures, ensuring efficiency, scalability, and consistency in deployment practices. My expertise lies in effectively translating infrastructure requirements into automated provisioning processes, enabling seamless management and rapid adaptation to evolving business needs.</li>
                                 </ul>
                             </div>
                             <div class="skillInfoItem" id="skill_analytics">
