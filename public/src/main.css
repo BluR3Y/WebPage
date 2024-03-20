@@ -1275,9 +1275,8 @@ body{
     float: left;
 }
 
-
 #projectOne {
-    background: url(../Images/Projects/Project6.png) 0 0 no-repeat fixed;
+    background: url(../Images/Projects/Project7.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
 }
@@ -1287,21 +1286,26 @@ body{
     background-size: 100% 100%;
 }
 #projectThree {
-    background: url(../Images/Projects/Project1.png) 0 0 no-repeat fixed;
+    background: url(../Images/Projects/Project6.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
 }
 #projectFour {
-    background: url(../Images/Projects/Project3.png) 0 0 no-repeat fixed;
+    background: url(../Images/Projects/Project1.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
 }
 #projectFive {
-    background: url(../Images/Projects/Project4.png) 0 0 no-repeat fixed;
+    background: url(../Images/Projects/Project3.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
 }
 #projectSix {
+    background: url(../Images/Projects/Project4.png) 0 0 no-repeat fixed;
+    background-attachment: local;
+    background-size: 100% 100%;
+}
+#projectSeven {
     background: url(../Images/Projects/Project2.png) 0 0 no-repeat fixed;
     background-attachment: local;
     background-size: 100% 100%;
